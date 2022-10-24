@@ -334,8 +334,8 @@ public class MainData  {
 
     public void addFriend(String name, String location, int stepsWalked) {
         ArrayList<Object> friendData= new ArrayList<>();
-        friendData.add(location);
         friendData.add(stepsWalked);
+        friendData.add(location);
         friends.put(name, friendData);
     }
 
