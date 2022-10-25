@@ -8,12 +8,20 @@ import java.util.Hashtable;
 
 @SuppressWarnings({"UnusedDeclaration"})
 public class MainData  {
-	
-  
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name;
     //EMPTY CONSTRUCTOR, no parameters. Used to create our current day
     public MainData() {
 	
-		this.name = "";
+		this.name = name;
 		this.weight = 0;
 		this.feet = 0;
 		this.inches = 0;
@@ -33,41 +41,6 @@ public class MainData  {
 		this.friends =new Hashtable<String, ArrayList<Object>>();
 	}
 
-	//Default constructor here to initialize everything
-	//Only used for history, so we dont have to use the setters for everything
-	
-
-	/***************
-     * User detail *
-     ***************/
-    //will have to fill some stuff in here
-    private String name;
-    public MainData(String name, int weight, int feet, int inches, String location, int calsEaten, int calsBreakfast,
-			int calsLunch, int calsDinner, int calsSnack, Hashtable<String, ArrayList<Object>> breakfast,
-			Hashtable<String, ArrayList<Object>> lunch, Hashtable<String, ArrayList<Object>> dinner,
-			Hashtable<String, ArrayList<Object>> snack, int calsBurned, workoutType dailyWorkout,  LocalDate day,
-			Hashtable<String, ArrayList<Object>> friends) {
-		
-		this.name = name;
-		this.weight = weight;
-		this.feet = feet;
-		this.inches = inches;
-		this.location = location;
-		this.calsEaten = calsEaten;
-		this.calsBreakfast = calsBreakfast;
-		this.calsLunch = calsLunch;
-		this.calsDinner = calsDinner;
-		this.calsSnack = calsSnack;
-		this.breakfast = breakfast;
-		this.lunch = lunch;
-		this.dinner = dinner;
-		this.snack = snack;
-		this.calsBurned = calsBurned;
-		this.dailyWorkout = dailyWorkout;
-		
-		this.day = day;
-		this.friends = friends;
-	}
 
 	private int weight;
     private int feet;
@@ -477,6 +450,86 @@ public class MainData  {
         return (String) friends.get(name).get(LOCATION);
     }
 
+
+
+
+    //Default constructor here to initialize everything
+    //Only used for history, so we dont have to use the setters for everything
+
+
+    /***************
+     * User detail *
+     ***************/
+    //will have to fill some stuff in here
+
+    public MainData(String name, int weight, int feet, int inches, String location, int calsEaten, int calsBreakfast,
+                    int calsLunch, int calsDinner, int calsSnack, Hashtable<String, ArrayList<Object>> breakfast,
+                    Hashtable<String, ArrayList<Object>> lunch, Hashtable<String, ArrayList<Object>> dinner,
+                    Hashtable<String, ArrayList<Object>> snack, int calsBurned, workoutType dailyWorkout,  LocalDate day,
+                    Hashtable<String, ArrayList<Object>> friends) {
+
+        this.name = name;
+        this.weight = weight;
+        this.feet = feet;
+        this.inches = inches;
+        this.location = location;
+        this.calsEaten = calsEaten;
+        this.calsBreakfast = calsBreakfast;
+        this.calsLunch = calsLunch;
+        this.calsDinner = calsDinner;
+        this.calsSnack = calsSnack;
+        this.breakfast = breakfast;
+        this.lunch = lunch;
+        this.dinner = dinner;
+        this.snack = snack;
+        this.calsBurned = calsBurned;
+        this.dailyWorkout = dailyWorkout;
+
+        this.day = day;
+        this.friends = friends;
+    }
+
+    public MainData yesterday() {
+        String name = "Me";
+        int weight = 150;
+        int feet = 5;
+        int inches = 9;
+        String location = "College Park, MD";
+        int calsEaten = 2500;
+        int calsBreakfast = 500;
+        int calsLunch = 1000;
+        int calsDinner = 800;
+        int calsSnack = 200;
+        Hashtable breakfast = new Hashtable<String, ArrayList<Object>>();
+        ArrayList<Object> bfast = new ArrayList<Object>();
+        bfast.add(new Integer(500));
+        bfast.add("None");
+        breakfast.put("Waffles",bfast);
+        Hashtable lunch = new Hashtable<String, ArrayList<Object>>();
+        ArrayList<Object> lun = new ArrayList<Object>();
+        lun.add(new Integer(1000));
+        lun.add("None");
+        lunch.put("Nachos",lun);
+        Hashtable dinner = new Hashtable<String, ArrayList<Object>>();
+        ArrayList<Object> din = new ArrayList<Object>();
+        din.add(new Integer(800));
+        din.add("High protein");
+        dinner.put("Tofu melt",din);
+        Hashtable snack = new Hashtable<String, ArrayList<Object>>();
+        ArrayList<Object> sn = new ArrayList<Object>();
+        sn.add(new Integer(200));
+        sn.add("High sugar");
+        snack.put("Protein shake",sn);
+        workoutType dailyWorkout=workoutType.RUN;
+        int calsBurned = 700;
+        LocalDate day = LocalDate.now().minusDays(1);
+        Hashtable friends =new Hashtable<String, ArrayList<Object>>();
+        ArrayList<Object> friendY = new ArrayList<>();
+        friendY.add(1000);
+        friendY.add("Greenbelt, MD");
+        friends.put("Josh",friendY);
+        return new MainData(name,weight,feet,inches,location,calsEaten,calsBreakfast,calsLunch,calsDinner,calsSnack,breakfast,lunch,dinner,snack, calsBurned, dailyWorkout,day,friends);
+    }
 }
 
   
