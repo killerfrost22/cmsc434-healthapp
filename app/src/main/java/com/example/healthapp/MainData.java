@@ -423,6 +423,8 @@ public class MainData  {
 	}
 
 	int userHeight=this.getHeight();
+
+
     /*GLOBAL ASSUMPTIONS:
      * we are using the math that for the average person, their 
      * height in inches * 0.414(from the internet)
@@ -432,6 +434,7 @@ public class MainData  {
      * If we multiply their steps by their stride length, we can calculate a 
      * distance for the activity.
      */
+
     float strideLength= (float)userHeight * (float)0.414;
    //no setter for distance as it is calculated at runtime
     public float getDistance() {
