@@ -1,3 +1,5 @@
+
+
 package com.example.healthapp;
 
 import java.time.LocalDate;
@@ -6,11 +8,68 @@ import java.util.Hashtable;
 
 @SuppressWarnings({"UnusedDeclaration"})
 public class MainData  {
-    /***************
+	
+  
+    //EMPTY CONSTRUCTOR, no parameters. Used to create our current day
+    public MainData() {
+	
+		this.name = "";
+		this.weight = 0;
+		this.feet = 0;
+		this.inches = 0;
+		this.location = "";
+		this.calsEaten = 0;
+		this.calsBreakfast = 0;
+		this.calsLunch = 0;
+		this.calsDinner = 0;
+		this.calsSnack = 0;
+		this.breakfast = new Hashtable<String, ArrayList<Object>>();
+		this.lunch = new Hashtable<String, ArrayList<Object>>();
+		this.dinner = new Hashtable<String, ArrayList<Object>>();
+		this.snack = new Hashtable<String, ArrayList<Object>>();
+		this.dailyWorkout=null;
+		this.calsBurned = 0;
+		this.day = LocalDate.now();
+		this.friends =new Hashtable<String, ArrayList<Object>>();
+	}
+
+	//Default constructor here to initialize everything
+	//Only used for history, so we dont have to use the setters for everything
+	
+
+	/***************
      * User detail *
      ***************/
+    //will have to fill some stuff in here
     private String name;
-    private int weight;
+    public MainData(String name, int weight, int feet, int inches, String location, int calsEaten, int calsBreakfast,
+			int calsLunch, int calsDinner, int calsSnack, Hashtable<String, ArrayList<Object>> breakfast,
+			Hashtable<String, ArrayList<Object>> lunch, Hashtable<String, ArrayList<Object>> dinner,
+			Hashtable<String, ArrayList<Object>> snack, int calsBurned, workoutType dailyWorkout,  LocalDate day,
+			Hashtable<String, ArrayList<Object>> friends) {
+		
+		this.name = name;
+		this.weight = weight;
+		this.feet = feet;
+		this.inches = inches;
+		this.location = location;
+		this.calsEaten = calsEaten;
+		this.calsBreakfast = calsBreakfast;
+		this.calsLunch = calsLunch;
+		this.calsDinner = calsDinner;
+		this.calsSnack = calsSnack;
+		this.breakfast = breakfast;
+		this.lunch = lunch;
+		this.dinner = dinner;
+		this.snack = snack;
+		this.calsBurned = calsBurned;
+		this.dailyWorkout = dailyWorkout;
+		
+		this.day = day;
+		this.friends = friends;
+	}
+
+	private int weight;
     private int feet;
     private int inches;
     private String location;
@@ -154,7 +213,7 @@ public class MainData  {
      * Removes meal of type mealType with String "meal" from data if it exists by switching mealType
      * to Perform the proper operations on the correct meals.
      *
-     * @param  mealType Integer representation fo the meal type
+     * @param  mealType Integer representation of the meal type
      * @param  meal The String representing the meal name
      * @return whether item was successfully removed
      */
@@ -318,8 +377,75 @@ public class MainData  {
     /***********
      * Workout *
      ***********/
-    int calsBurned;
+    private int calsBurned;
+    //enumerated type for workout
+    public enum workoutType{
+    	RUN, WALK, WEIGHTS
+    }
+    //getters and setters for todays workout
+    private workoutType dailyWorkout;
+    public void setWorkout(workoutType today) {
+    	dailyWorkout=today;
+    }
+    public workoutType getWorkout() {
+    	if (dailyWorkout==null) {return null;}
+    	return dailyWorkout;
+    }
+    
+    //RUN/WALK
+    
+    int runWalkSteps;
+    
+    int runWalkTime;//in seconds? we'll have to cast whatever type our timer returns
+	//to an Integer when we call the setter for this. it'll make our step calc easier
+    public int getRunWalkSteps() {
+		return runWalkSteps;
+	}
 
+	public void setRunWalkSteps() {
+		this.runWalkSteps = this.getRunWalkTime()*(this.dailyWorkout==workoutType.WALK?2:3);
+	}
+
+	public int getRunWalkTime() {
+		return runWalkTime;
+	}
+
+	public void setRunWalkTime(int runWalkTime) {
+		this.runWalkTime = runWalkTime;
+	}
+
+
+    float avgSpeed=this.getDistance()/(float)this.runWalkTime;
+    		//steps per second
+    //no setter for avgspeed, calcd at runtime
+    public float getAvgSpeed() {
+		return avgSpeed;
+	}
+
+	int userHeight=this.getHeight();
+    /*GLOBAL ASSUMPTIONS:
+     * we are using the math that for the average person, their 
+     * height in inches * 0.414(from the internet)
+     * equals their stride length.
+     * For walks, we will assume one step per second for our mock data.
+     * For runs, it will be 3 steps per second.
+     * If we multiply their steps by their stride length, we can calculate a 
+     * distance for the activity.
+     */
+    float strideLength= (float)userHeight * (float)0.414;
+   //no setter for distance as it is calculated at runtime
+    public float getDistance() {
+    	
+    		return strideLength*runWalkSteps;//inches
+    	
+    }
+    
+    
+    
+    
+    
+    
+    
     /***********
      * History *
      ***********/
