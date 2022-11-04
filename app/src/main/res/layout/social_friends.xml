@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize"
+    android:background="@color/white">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <TextView
+        android:id="@+id/friend"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friends"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/friend_nearby"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Friends nearby"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/friend"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/first_friend_photo"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:src="@drawable/photo1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/friend_nearby"
+        />
+
+    <TextView
+        android:id="@+id/first_friend_location"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Alexander:        NYC, New York"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/first_friend_photo"
+        app:layout_constraintTop_toBottomOf="@id/friend_nearby"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/divider1"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/first_friend_photo"
+        >
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/second_friend_photo"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:src="@drawable/photo2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        />
+
+    <TextView
+        android:id="@+id/second_friend_location"
+        android:fontFamily="sans-serif"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Emily:        College Park, Maryland"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/second_friend_photo"
+        app:layout_constraintTop_toBottomOf="@id/divider1"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="More"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/second_friend_photo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="56dp">
+
+    </TextView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
