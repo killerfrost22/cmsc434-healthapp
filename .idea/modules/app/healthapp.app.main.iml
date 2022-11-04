@@ -14,6 +14,7 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
+                <arg>$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d6b8c7076041e2db19698ad921c991ec/transformed/viewbinding-7.2.2-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/a45988e51c941878bc491f6f6e6d42c8/transformed/navigation-fragment-ktx-2.3.5-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/97a73efedd0fe09bae630fe9b1f00f74/transformed/navigation-ui-ktx-2.3.5-api.jar</arg>
@@ -87,6 +88,7 @@
             <stringArg name="languageVersion" arg="1.7" />
           </stringArguments>
           <arrayArguments>
+            <arrayArg name="friendPaths" />
             <arrayArg name="pluginClasspaths" />
             <arrayArg name="pluginOptions" />
           </arrayArguments>
