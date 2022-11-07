@@ -15,6 +15,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.healthapp.databinding.ActivityMainBinding
+import com.example.healthapp.MainData as HealthappMainData
 
 import java.text.SimpleDateFormat
 import java.util.*
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
     var finalTime = 0L
 
     private lateinit var binding: ActivityMainBinding
+    public var TODAY =com.example.healthapp.MainData()
+    public val YDAY = com.example.healthapp.MainData().yesterday()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
