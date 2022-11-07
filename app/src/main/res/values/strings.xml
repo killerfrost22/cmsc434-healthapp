@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">healthapp</string>
-    <string name="title_home">Workout</string>
-    <string name="title_dashboard">Home</string>
-    <string name="title_notifications">Nutrition</string>
+    <string name="title_workout">Workout</string>
+    <string name="title_home">Home</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="social">Social</string>
+    <string name="history">History</string>
+    <string name="search">Search</string>
 </resources>
