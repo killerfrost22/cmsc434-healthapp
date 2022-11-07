@@ -1,22 +1,625 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="?android:attr/actionBarSize"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="0dp"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <TextView
-        android:id="@+id/text_dashboard"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        tools:layout_conversion_absoluteHeight="640dp"
+        tools:layout_conversion_absoluteWidth="382dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/yourDayTitle"
+                android:layout_width="384dp"
+                android:layout_height="44dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+
+                android:shadowColor="#7f000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Your Day At A Glance"
+                android:textColor="#638EC3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <LinearLayout
+                android:layout_width="363dp"
+                android:layout_height="400dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/calsHeader"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:shadowColor="#372F2F"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:text="CALORIES"
+                        android:textColor="#3E62CF"
+                        android:textCursorDrawable="@drawable/ic_launcher_background"
+                        android:textIsSelectable="false"
+                        android:textSize="24sp"
+                        android:typeface="normal" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:id="@+id/textView6a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Breakfast"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/homeBreakfastCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:shadowColor="#0E0C0C"
+                        android:shadowDx="2"
+                        android:shadowDy="3"
+                        android:shadowRadius="1"
+                        android:text="500"
+                        android:textColor="#269F9C"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="9dp" />
+
+                    <TextView
+                        android:id="@+id/textView6a3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal"
+                        android:text="Lunch"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/homeLunchCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:shadowColor="#0C0B0B"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="500"
+                        android:textColor="#D17638"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="9dp" />
+
+                    <TextView
+                        android:id="@+id/textView6a4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal"
+                        android:text="Dinner"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/homeDinnerCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:shadowColor="#151111"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="500"
+                        android:textColor="#A10808"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="9dp" />
+
+                    <TextView
+                        android:id="@+id/textView6a5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Snack"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/homeSnackCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:text="500"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/exHeader"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:fontFamily="sans-serif-light"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:shadowColor="#372F2F"
+                            android:shadowDx="2"
+                            android:shadowDy="2"
+                            android:shadowRadius="1"
+                            android:text="EXERCISE"
+                            android:textColor="#DF375E"
+                            android:textCursorDrawable="@drawable/ic_launcher_background"
+                            android:textIsSelectable="false"
+                            android:textSize="24sp"
+                            android:typeface="normal" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:id="@+id/textView6a2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal"
+                            android:text="Steps"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/stepNum"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|center_horizontal"
+                            android:text="8957"
+                            android:textColor="#242B5A"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="11dp" />
+
+                        <TextView
+                            android:id="@+id/textView6a6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal"
+                            android:text="Cals Burned"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/calBurn"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="right|center_vertical"
+                                android:text="350"
+                                android:textSize="20sp" />
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="22dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@drawable/fire_img"
+                                app:srcCompat="@drawable/flame_svgrepo_com" />
+                        </LinearLayout>
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <TextView
+                            android:id="@+id/textView6a7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal"
+                            android:text="Today's Weight"
+                            android:textColor="#000000"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/todayWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="188lbs"
+                            android:textColor="#5A2727"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="12dp" />
+
+                        <TextView
+                            android:id="@+id/textView6a8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal"
+                            android:text="Daily Workout"
+                            android:textColor="#7C1313"
+                            android:textSize="16sp"
+                            android:textStyle="italic" />
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="84dp"
+                            android:src="@drawable/ic_baseline_fitness_center_24" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <LinearLayout
+                android:layout_width="363dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_weight="1"
+                android:background="@drawable/bordertwo"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:selectAllOnFocus="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="GOALS"
+                    android:textColor="#0F431A"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Daily Goal"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2300 cals"
+                        android:textAlignment="center"
+                        android:textColor="#6975c8"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar2"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="209dp"
+                        android:gravity="center"
+                        android:maxHeight="40dip"
+                        android:minHeight="40dip"
+                        android:progress="50"
+                        android:progressTint="#6975C8"
+                        android:scaleX=".7"
+                        android:scaleY="15" />
+
+                    <TextView
+                        android:id="@+id/pbarText"
+                        android:layout_width="match_parent"
+                        android:layout_height="213dp"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="90%"
+                        android:textColor="#0E0B02"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+                    <!--background="@drawable/border" -->
+
+
+                    <!-- TextView with transparent background -->
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="Long Term Goal"
+                        android:textSize="20sp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="179 lbs"
+                        android:textAlignment="center"
+                        android:textColor="#cd3f3f"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <ProgressBar
+                        android:id="@+id/pbar3"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:maxHeight="40dip"
+                        android:minHeight="40dip"
+                        android:progress="76"
+                        android:progressTint="#CD3F3F"
+                        android:scaleX="0.7"
+                        android:scaleY="15" />
+
+                    <TextView
+                        android:id="@+id/pbarText2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#00000000"
+                        android:gravity="center"
+                        android:text="76%"
+                        android:textColor="#050D23"
+                        android:textSize="34sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weekly Progress"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="363dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView23"
+                        android:layout_width="193dp"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView24"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView26"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView27"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/textView29"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:text="TextView" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressBar8"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar14"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar15"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar16"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar17"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar18"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar19"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="#8A2626"
+                android:scaleY="1"
+                android:text="SHARE PROGRESS"
+                app:icon="@android:drawable/ic_menu_share" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
