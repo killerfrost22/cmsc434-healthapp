@@ -21,7 +21,7 @@ public class MainData  {
     //EMPTY CONSTRUCTOR, no parameters. Used to create our current day
     public MainData() {
 	
-		this.name = name;
+		this.name = "";
 		this.weight = 0;
 		this.feet = 0;
 		this.inches = 0;
@@ -39,6 +39,8 @@ public class MainData  {
 		this.calsBurned = 0;
 		this.day = LocalDate.now();
 		this.friends =new Hashtable<String, ArrayList<Object>>();
+        this.calsGoal=0;
+        this.burnedGoal=0;
 	}
 
 
@@ -63,9 +65,35 @@ public class MainData  {
     private final int NOTES = 1; // location of notes in the object array list
 
     int calsEaten;
+    int calsGoal;
     int calsBreakfast;
     int calsLunch;
     int calsDinner;
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public int getCalsEaten() {
+        return calsEaten;
+    }
+
+    public int getCalsBreakfast() {
+        return calsBreakfast;
+    }
+
+    public int getCalsLunch() {
+        return calsLunch;
+    }
+
+    public int getCalsDinner() {
+        return calsDinner;
+    }
+
+    public int getCalsSnack() {
+        return calsSnack;
+    }
+
     int calsSnack;
 
     /* Meal Type Hash Variables */
@@ -351,6 +379,24 @@ public class MainData  {
      * Workout *
      ***********/
     private int calsBurned;
+    int burnedGoal;
+
+    public int getCalsGoal() {
+        return calsGoal;
+    }
+
+    public void setCalsGoal(int calsGoal) {
+        this.calsGoal = calsGoal;
+    }
+
+    public int getBurnedGoal() {
+        return burnedGoal;
+    }
+
+    public void setBurnedGoal(int burnedGoal) {
+        this.burnedGoal = burnedGoal;
+    }
+
     //enumerated type for workout
     public enum workoutType{
     	RUN, WALK, WEIGHTS
@@ -466,7 +512,7 @@ public class MainData  {
                     int calsLunch, int calsDinner, int calsSnack, Hashtable<String, ArrayList<Object>> breakfast,
                     Hashtable<String, ArrayList<Object>> lunch, Hashtable<String, ArrayList<Object>> dinner,
                     Hashtable<String, ArrayList<Object>> snack, int calsBurned, workoutType dailyWorkout,  LocalDate day,
-                    Hashtable<String, ArrayList<Object>> friends) {
+                    Hashtable<String, ArrayList<Object>> friends, int calsGoal,int burnedGoal) {
 
         this.name = name;
         this.weight = weight;
@@ -487,6 +533,8 @@ public class MainData  {
 
         this.day = day;
         this.friends = friends;
+        this.calsGoal=calsGoal;
+        this.burnedGoal=burnedGoal;
     }
 
     public MainData yesterday() {
@@ -496,6 +544,7 @@ public class MainData  {
         int inches = 9;
         String location = "College Park, MD";
         int calsEaten = 2500;
+        int calsGoal=2600;
         int calsBreakfast = 500;
         int calsLunch = 1000;
         int calsDinner = 800;
@@ -522,13 +571,14 @@ public class MainData  {
         snack.put("Protein shake",sn);
         workoutType dailyWorkout=workoutType.RUN;
         int calsBurned = 700;
+        int burnedGoal=800;
         LocalDate day = LocalDate.now().minusDays(1);
         Hashtable friends =new Hashtable<String, ArrayList<Object>>();
         ArrayList<Object> friendY = new ArrayList<>();
         friendY.add(1000);
         friendY.add("Greenbelt, MD");
         friends.put("Josh",friendY);
-        return new MainData(name,weight,feet,inches,location,calsEaten,calsBreakfast,calsLunch,calsDinner,calsSnack,breakfast,lunch,dinner,snack, calsBurned, dailyWorkout,day,friends);
+        return new MainData(name,weight,feet,inches,location,calsEaten,calsBreakfast,calsLunch,calsDinner,calsSnack,breakfast,lunch,dinner,snack, calsBurned, dailyWorkout,day,friends,calsGoal,burnedGoal);
     }
 }
 
