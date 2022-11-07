@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddExercise">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log Your Exercise"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            />
+        <EditText
+            android:id="@+id/activityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            android:hint="Exercise Name:"
+            />
+        <EditText
+            android:id="@+id/activityDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            android:hint="Exercise Date:"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Exercise Type:"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:gravity="left"
+            android:paddingLeft="20dip"
+            />
+
+        <Spinner
+            android:id="@+id/exerciseType"
+            android:layout_width="381dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:drawable/btn_dropdown"
+
+            android:padding="10dip"
+            android:spinnerMode="dropdown"
+            android:text="Exercise Type" />
+
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            android:hint="Duration (minutes):"/>
+
+        <EditText
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            android:hint="Enter Weight (lbs):" />
+
+        <EditText
+            android:id="@+id/reps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:inputType="text"
+            android:hint="Enter Repetitions (number):" />
+
+        <Button
+            android:id="@+id/SubmitActivity"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:textSize="20sp"
+            android:paddingLeft="20dp"
+            android:text="Submit" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

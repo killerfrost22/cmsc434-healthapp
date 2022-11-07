@@ -1,6 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".nutrition.RegisterUserActivity">
+
+    <TextView
+        android:id="@+id/userNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/user_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/userNameEdit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userNameLabel"
+        app:layout_constraintTop_toTopOf="parent" >
+    </EditText>
+
+    <TextView
+        android:id="@+id/userAgeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userNameLabel"
+        android:text="@string/user_age"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/userAgeEdit"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userAgeLabel"
+        app:layout_constraintTop_toBottomOf="@id/userNameEdit"
+        android:layout_marginTop="20dp"
+        android:maxLength="3">
+    </EditText>
+
+    <TextView
+        android:id="@+id/userHeightFtLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userAgeLabel"
+        android:text="@string/user_heightFt"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/userHeightFtEdit"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userHeightFtLabel"
+        app:layout_constraintTop_toBottomOf="@id/userAgeEdit"
+        android:layout_marginTop="20dp"
+        android:maxLength="1">
+    </EditText>
+
+    <TextView
+        android:id="@+id/userHeightInLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@id/userHeightFtEdit"
+        app:layout_constraintTop_toBottomOf="@id/userAgeLabel"
+        android:text="@string/user_heightIn"
+        android:layout_marginTop="30dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/userHeightInEdit"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userHeightInLabel"
+        app:layout_constraintTop_toBottomOf="@id/userAgeEdit"
+        android:layout_marginTop="20dp"
+        android:maxLength="2">
+    </EditText>
+
+    <TextView
+        android:id="@+id/userWeightLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userHeightFtLabel"
+        android:text="@string/user_weight"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+    </TextView>
+
+    <EditText
+        android:id="@+id/userWeightEdit"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userWeightLabel"
+        app:layout_constraintTop_toBottomOf="@id/userHeightFtEdit"
+        android:layout_marginTop="20dp"
+        android:maxLength="3">
+    </EditText>
+
+    <TextView
+        android:id="@+id/userGenderLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userWeightLabel"
+        android:text="@string/user_gender"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp">
+    </TextView>
+
+    <RadioGroup
+        android:id="@+id/genderRadioGroup"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/userGenderLabel"
+        app:layout_constraintTop_toBottomOf="@id/userWeightEdit"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/genderMButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_gender_m" />
+
+        <RadioButton
+            android:id="@+id/genderFButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_gender_f"
+            android:layout_marginLeft="15dp" />
+
+        <RadioButton
+            android:id="@+id/genderOtherButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_gender_other"
+            android:layout_marginLeft="15dp"
+            android:checked="true" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/userContinueButton"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:textSize="20sp"
+        android:text="@string/user_continue_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp">
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

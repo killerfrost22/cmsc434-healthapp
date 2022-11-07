@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nutrition.TitleScreen">
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -26,7 +25,7 @@
         android:layout_height="wrap_content"
         android:text="@string/title_1"
         android:textSize="40sp"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#FF6200EE"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
