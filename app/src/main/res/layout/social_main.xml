@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize"
-    android:background="@color/white">
+    android:background="@color/green">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -23,7 +23,7 @@
     <TextView
         android:id="@+id/feeling"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
+        android:layout_height="350dp"
         android:text="How are you feeling about the workout today?"
         android:fontFamily="sans-serif"
         android:textSize="18sp"
@@ -31,21 +31,38 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/nav_host_fragment_activity_main"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        tools:layout_editor_absoluteX="0d
+        0p"
+        tools:layout_editor_absoluteY="16dp">
 
     </TextView>
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:text=""
+        android:fontFamily="sans-serif"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/feeling"
+        tools:layout_editor_absoluteX="0d
+        0p"
+        tools:layout_editor_absoluteY="16dp">
 
+    </TextView>
     <Button
         android:id="@+id/awesome"
         android:layout_width="120dp"
         android:layout_height="50dp"
         android:text="Awesome Day"
         android:textSize="11sp"
+        android:onClick="moodChoice"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/alright"
-        app:layout_constraintTop_toBottomOf="@id/feeling">
+        app:layout_constraintTop_toBottomOf="@id/empty">
     </Button>
 
     <Button
@@ -54,10 +71,11 @@
         android:layout_height="50dp"
         android:text="It is alright"
         android:textSize="11sp"
+        android:onClick="moodChoice"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/awesome"
         app:layout_constraintRight_toLeftOf="@id/not_great"
-        app:layout_constraintTop_toBottomOf="@id/feeling">
+        app:layout_constraintTop_toBottomOf="@id/empty">
 
     </Button>
 
@@ -67,10 +85,11 @@
         android:layout_height="50dp"
         android:text="Not so Great"
         android:textSize="11sp"
+        android:onClick="moodChoice"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@id/alright"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/feeling">
+        app:layout_constraintTop_toBottomOf="@id/empty">
 
     </Button>
 
@@ -105,7 +124,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

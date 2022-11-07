@@ -496,7 +496,7 @@ public class MainData  {
         return (String) friends.get(name).get(LOCATION);
     }
 
-
+    public void stepUpdate(String name, int stepsWalked) { friends.get(name).set(STEPS, stepsWalked); }
 
 
     //Default constructor here to initialize everything

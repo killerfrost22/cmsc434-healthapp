@@ -5,8 +5,8 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize"
-    android:background="@color/white">
+    android:background="@color/green"
+    android:paddingTop="?attr/actionBarSize">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
@@ -22,105 +22,225 @@
 
     <TextView
         android:id="@+id/friend"
-        android:fontFamily="sans-serif"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
         android:text="Friends"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        tools:layout_editor_absoluteY="16dp">
 
     </TextView>
 
     <TextView
         android:id="@+id/friend_nearby"
-        android:fontFamily="sans-serif"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
+        android:fontFamily="sans-serif"
         android:text="Friends nearby"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/friend"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        tools:layout_editor_absoluteY="16dp">
 
     </TextView>
 
-    <ImageView
-        android:id="@+id/first_friend_photo"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:src="@drawable/photo1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/friend_nearby"
-        />
+    <LinearLayout
+        android:id="@+id/first_friend"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="5dp"
+        android:background="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/friend_nearby"
+        app:layout_constraintTop_toBottomOf="@id/friend_nearby">
 
-    <TextView
-        android:id="@+id/first_friend_location"
-        android:fontFamily="sans-serif"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Alexander:        NYC, New York"
-        android:textSize="12sp"
-        app:layout_constraintLeft_toRightOf="@id/first_friend_photo"
-        app:layout_constraintTop_toBottomOf="@id/friend_nearby"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        <ImageView
+            android:id="@+id/first_friend_photo"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:src="@drawable/photo1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/friend_nearby" />
 
-    </TextView>
+        <TextView
+            android:id="@+id/first_friend_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif"
+            android:text="Alexander:        NYC, New York"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/first_friend_photo"
+            app:layout_constraintTop_toBottomOf="@id/friend_nearby"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
 
+        </TextView>
+
+        <TextView
+            android:id="@+id/first_friend_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif"
+            android:text="5455 steps today"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/first_friend_photo"
+            app:layout_constraintTop_toBottomOf="@id/first_friend_location"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </TextView>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/divider1"
         android:layout_width="20dp"
         android:layout_height="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/first_friend_photo"
-        >
+        app:layout_constraintTop_toBottomOf="@id/first_friend">
 
     </TextView>
 
-    <ImageView
-        android:id="@+id/second_friend_photo"
-        android:layout_width="100dp"
-        android:layout_height="75dp"
-        android:src="@drawable/photo2"
+    <LinearLayout
+        android:id="@+id/second_friend"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="@id/divider1"
+        app:layout_constraintTop_toBottomOf="@id/divider1">
+
+        <ImageView
+            android:id="@+id/second_friend_photo"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:src="@drawable/photo2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider1" />12
+
+        <TextView
+            android:id="@+id/second_friend_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif"
+            android:text="Emily:        College Park, Maryland"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@id/second_friend_photo"
+            app:layout_constraintTop_toBottomOf="@id/divider1"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/second_friend_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif"
+            android:text="18309 steps today"
+            android:textSize="15sp"
+            app:layout_constraintLeft_toRightOf="@id/second_friend_photo"
+            app:layout_constraintTop_toBottomOf="@id/second_friend_location"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </TextView>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/divider2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider1"
+        app:layout_constraintTop_toBottomOf="@id/second_friend">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/third_friend"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="@id/divider2"
+        app:layout_constraintTop_toBottomOf="@id/divider2">
+
+        <ImageView
+            android:id="@+id/third_friend_photo"
+            android:layout_width="100dp"
+            android:layout_height="75dp"
+            android:src="@drawable/ic_happy_face"
         />
 
-    <TextView
-        android:id="@+id/second_friend_location"
-        android:fontFamily="sans-serif"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
-        android:text="Emily:        College Park, Maryland"
-        android:textSize="12sp"
-        app:layout_constraintLeft_toRightOf="@id/second_friend_photo"
-        app:layout_constraintTop_toBottomOf="@id/divider1"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        <TextView
+            android:id="@+id/third_friend_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="sans-serif"
+            android:text="Anderson:     College Park, Maryland"
+            android:textSize="18sp"
 
-    </TextView>
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
 
-    <TextView
-        android:id="@+id/more"
+        </TextView>
+
+        <TextView
+            android:id="@+id/third_friend_steps"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:fontFamily="sans-serif"
+            android:text="3958 steps today"
+            android:textSize="15sp"
+
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="More"
-        android:textSize="18sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/second_friend_photo"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="56dp">
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@id/third_friend"
+        app:layout_constraintTop_toBottomOf="@id/third_friend">
 
-    </TextView>
+        <TextView
+            android:id="@+id/more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:text="More"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/second_friend_photo"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp">
 
+        </TextView>
 
+        <TextView
+            android:id="@+id/people_nearby"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Want to see how other nearby people doing?"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/more"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp">
+
+        </TextView>
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
