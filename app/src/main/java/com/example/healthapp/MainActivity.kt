@@ -6,26 +6,27 @@ import android.content.Intent
 import android.graphics.*
 import android.net.Uri
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
+import android.widget.Button
+import android.widget.TextView
+import android.widget.VideoView
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.DatePicker
 import android.widget.TimePicker
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat.startActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.healthapp.databinding.ActivityMainBinding
-import com.example.healthapp.MainData as HealthappMainData
-
+import com.example.healthapp.ui.social.SocialActivity
 import java.text.SimpleDateFormat
 import java.util.*
-import android.view.MenuInflater
-import android.widget.TextView
-import android.widget.VideoView
-import com.example.healthapp.ui.social.SocialActivity
+import com.example.healthapp.MainData as HealthappMainData
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
     lateinit var curCalendar: Calendar
@@ -86,33 +87,33 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 //            }
         }
     }
+//
+//    private fun setTimeListener() {
+//        curCalendar = Calendar.getInstance()
+//
+//        timeSetListener =
+//            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
+//                curCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+//                curCalendar.set(Calendar.MINUTE, min)
+//                updateTime()
+//            }
+//    }
 
-    private fun setTimeListener() {
-        curCalendar = Calendar.getInstance()
-
-        timeSetListener =
-            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
-                curCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-                curCalendar.set(Calendar.MINUTE, min)
-                updateTime()
-            }
-
-    fun playVideo(v: View){
+    fun playVideo(v: View) {
         //var b = v.findViewById<Button>(R.id.starMed1)
         var hr = findViewById<TextView>(R.id.heartRate)
         var x = findViewById<VideoView>(R.id.videoView)
 
-        x.setVideoURI(Uri.parse("android.resource://"+ getPackageName() +"/"+R.raw.medppt))
-        hr.visibility=View.VISIBLE
+        x.setVideoURI(Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.medppt))
+        hr.visibility = View.VISIBLE
         x.start()
-    }
+        }
 
-        val timePickerDialog = TimePickerDialog(
-            this, timeSetListener, curCalendar.get(Calendar.HOUR_OF_DAY),
-            curCalendar.get(Calendar.MINUTE), false
-        )
+    val timePickerDialog = TimePickerDialog(
+        this, timeSetListener, curCalendar.get(Calendar.HOUR_OF_DAY),
+        curCalendar.get(Calendar.MINUTE), false
+    )
 //        timePickerDialog.show()
-    }
 
 
 //            private fun setListener() {
@@ -150,5 +151,4 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         val intent = Intent(this, SocialActivity::class.java)
         startActivity(intent)
     }
-
 }
