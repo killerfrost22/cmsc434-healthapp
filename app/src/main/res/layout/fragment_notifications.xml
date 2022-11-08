@@ -6,17 +6,677 @@
     android:layout_height="match_parent"
     tools:context=".ui.notifications.NotificationsFragment">
 
-    <TextView
-        android:id="@+id/text_notifications"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth="match_parent"
+        tools:layout_conversion_absoluteHeight="640dp"
+        tools:layout_conversion_absoluteWidth="382dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/yourDayTitle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+
+                android:shadowColor="#7f000000"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="Nutrition"
+                android:textColor="#638EC3"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/calsHeader"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_horizontal|center_vertical"
+                android:shadowColor="#372F2F"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="CALORIES"
+                android:textColor="#3E62CF"
+                android:textCursorDrawable="@drawable/ic_launcher_background"
+                android:textIsSelectable="false"
+                android:textSize="24sp"
+                android:typeface="normal" />
+
+            <LinearLayout
+                android:layout_width="363dp"
+                android:layout_height="166dp"
+                android:layout_gravity="center"
+                android:background="@drawable/border"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="121dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/bfastNut1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Breakfast"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:translationY="2dp" />
+
+                        <TextView
+                            android:id="@+id/nutritionBreakfastCals"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:fontFamily="casual"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:shadowColor="#0E0C0C"
+                            android:shadowDx="2"
+                            android:shadowDy="3"
+                            android:shadowRadius="1"
+                            android:text="500"
+                            android:textColor="#269F9C"
+                            android:textSize="38sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/Snack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/poppins"
+                            android:gravity="center_horizontal|center_vertical"
+                            android:text="Snack"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:translationY="2dp" />
+
+                        <TextView
+                            android:id="@+id/nutritionSnackCals"
+                            android:layout_width="match_parent"
+                            android:layout_height="46dp"
+                            android:fontFamily="casual"
+                            android:gravity="center"
+                            android:text="500"
+                            android:textSize="38sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/lunNut1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal"
+                        android:text="Lunch"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/nutritionLunchCals1"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:shadowColor="#0C0B0B"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="500"
+                        android:textColor="#D17638"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/nutritionRemaining1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal"
+                        android:text="Remaining"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/nutritionRemainingCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center|center_horizontal"
+                        android:text="-500"
+                        android:textColor="#242B5A"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="105dp"
+                    android:layout_height="70dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/dinNut1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center_horizontal"
+                        android:text="Dinner"
+                        android:textColor="#000000"
+                        android:textSize="16sp"
+                        android:translationY="2dp" />
+
+                    <TextView
+                        android:id="@+id/nutritionDinnerCals"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:fontFamily="casual"
+                        android:gravity="center"
+                        android:shadowColor="#151111"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="500"
+                        android:textColor="#A10808"
+                        android:textSize="38sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="362dp"
+                android:layout_height="249dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordertwo"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:selectAllOnFocus="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="Breakfast"
+                    android:textColor="#0F431A"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="121dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/bfastMeal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Meal"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:translationY="2dp" />
+
+                                <TextView
+                                    android:id="@+id/bfastMealExample"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="46dp"
+                                    android:fontFamily="casual"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:shadowColor="#0E0C0C"
+                                    android:shadowDx="2"
+                                    android:shadowDy="3"
+                                    android:shadowRadius="1"
+                                    android:text="Pancakes"
+                                    android:textColor="#269F9C"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bFastMealCals"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Calories"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/bFasstLunchCalExample"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#0C0B0B"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="210"
+                                android:textColor="#D17638"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="105dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bFastAddName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Add"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/bFastAddButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#151111"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="+"
+                                android:textColor="#A10808"
+                                android:textSize="38sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="362dp"
+                android:layout_height="249dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bordertwo"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nutritionLunchSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:selectAllOnFocus="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="Lunch"
+                    android:textColor="#0F431A"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="121dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/lunchMealName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Meal"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:translationY="2dp" />
+
+                                <TextView
+                                    android:id="@+id/lunchMealExample"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="46dp"
+                                    android:fontFamily="casual"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:shadowColor="#0E0C0C"
+                                    android:shadowDx="2"
+                                    android:shadowDy="3"
+                                    android:shadowRadius="1"
+                                    android:text="Sandwich"
+                                    android:textColor="#269F9C"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lunchCalsName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Calories"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/lunchCalsExample"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#0C0B0B"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="320"
+                                android:textColor="#D17638"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="105dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/lunchAddName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Add"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/lunchAddButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#151111"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="+"
+                                android:textColor="#A10808"
+                                android:textSize="38sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="362dp"
+                android:layout_height="249dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0"
+                android:background="@drawable/bordertwo"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nutritionDinnerSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:selectAllOnFocus="true"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="Dinner"
+                    android:textColor="#0F431A"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@drawable/border"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="10dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="121dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/dinnerMealName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/poppins"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:text="Meal"
+                                    android:textColor="#000000"
+                                    android:textSize="16sp"
+                                    android:translationY="2dp" />
+
+                                <TextView
+                                    android:id="@+id/dinnerMealExample"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="46dp"
+                                    android:fontFamily="casual"
+                                    android:gravity="center_horizontal|center_vertical"
+                                    android:shadowColor="#0E0C0C"
+                                    android:shadowDx="2"
+                                    android:shadowDy="3"
+                                    android:shadowRadius="1"
+                                    android:text="Steak"
+                                    android:textColor="#269F9C"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView6a3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Calories"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/dinnerCalsExample"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#0C0B0B"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="500"
+                                android:textColor="#D17638"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="105dp"
+                            android:layout_height="70dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView6a12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/poppins"
+                                android:gravity="center_horizontal"
+                                android:text="Add"
+                                android:textColor="#000000"
+                                android:textSize="16sp"
+                                android:translationY="2dp" />
+
+                            <TextView
+                                android:id="@+id/homeDinnerCals"
+                                android:layout_width="match_parent"
+                                android:layout_height="46dp"
+                                android:fontFamily="casual"
+                                android:gravity="center"
+                                android:shadowColor="#151111"
+                                android:shadowDx="1"
+                                android:shadowDy="1"
+                                android:shadowRadius="1"
+                                android:text="+"
+                                android:textColor="#A10808"
+                                android:textSize="38sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

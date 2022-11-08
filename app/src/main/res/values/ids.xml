@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="userNameLabel" type="id" />
-    <item name="userNameLabel" type="id" />
     <item name="userNameEdit" type="id" />
     <item name="userAgeLabel" type="id" />
     <item name="userAgeEdit" type="id" />

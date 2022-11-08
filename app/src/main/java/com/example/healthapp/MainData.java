@@ -41,10 +41,11 @@ public class MainData  {
 		this.friends =new Hashtable<String, ArrayList<Object>>();
         this.calsGoal=0;
         this.burnedGoal=0;
+        this.age=0;
 	}
 
 
-	private int weight;
+	public int weight;
     private int feet;
     private int inches;
     private String location;
@@ -508,11 +509,12 @@ public class MainData  {
      ***************/
     //will have to fill some stuff in here
 
+    public int age;
     public MainData(String name, int weight, int feet, int inches, String location, int calsEaten, int calsBreakfast,
                     int calsLunch, int calsDinner, int calsSnack, Hashtable<String, ArrayList<Object>> breakfast,
                     Hashtable<String, ArrayList<Object>> lunch, Hashtable<String, ArrayList<Object>> dinner,
                     Hashtable<String, ArrayList<Object>> snack, int calsBurned, workoutType dailyWorkout,  LocalDate day,
-                    Hashtable<String, ArrayList<Object>> friends, int calsGoal,int burnedGoal) {
+                    Hashtable<String, ArrayList<Object>> friends, int calsGoal,int burnedGoal, int age) {
 
         this.name = name;
         this.weight = weight;
@@ -535,6 +537,7 @@ public class MainData  {
         this.friends = friends;
         this.calsGoal=calsGoal;
         this.burnedGoal=burnedGoal;
+        this.age=age;
     }
 
     public MainData yesterday() {
@@ -578,7 +581,7 @@ public class MainData  {
         friendY.add(1000);
         friendY.add("Greenbelt, MD");
         friends.put("Josh",friendY);
-        return new MainData(name,weight,feet,inches,location,calsEaten,calsBreakfast,calsLunch,calsDinner,calsSnack,breakfast,lunch,dinner,snack, calsBurned, dailyWorkout,day,friends,calsGoal,burnedGoal);
+        return new MainData(name,weight,feet,inches,location,calsEaten,calsBreakfast,calsLunch,calsDinner,calsSnack,breakfast,lunch,dinner,snack, calsBurned, dailyWorkout,day,friends,calsGoal,burnedGoal, 24);
     }
 }
 
