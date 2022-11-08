@@ -4,6 +4,7 @@ import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.graphics.*
+import android.net.Uri
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -22,6 +23,8 @@ import com.example.healthapp.MainData as HealthappMainData
 import java.text.SimpleDateFormat
 import java.util.*
 import android.view.MenuInflater
+import android.widget.TextView
+import android.widget.VideoView
 import com.example.healthapp.ui.social.SocialActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
@@ -103,49 +106,49 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
         hr.visibility=View.VISIBLE
         x.start()
     }
-}
 
         val timePickerDialog = TimePickerDialog(
             this, timeSetListener, curCalendar.get(Calendar.HOUR_OF_DAY),
             curCalendar.get(Calendar.MINUTE), false
         )
-        timePickerDialog.show()
+//        timePickerDialog.show()
     }
 
 
-            private fun setListener() {
-                curCalendar = Calendar.getInstance()
-
-                dateSetListener =
-                    DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
-                        curCalendar.set(Calendar.YEAR, year)
-                        curCalendar.set(Calendar.MONTH, month)
-                        curCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-                        updateDate()
-
-                    }
-
-                val datePickerDialog = DatePickerDialog(
-                    this, dateSetListener, curCalendar.get(Calendar.YEAR),
-                    curCalendar.get(Calendar.MONTH), curCalendar.get(Calendar.DAY_OF_MONTH)
-                )
-                datePickerDialog.datePicker.minDate = System.currentTimeMillis()
-                datePickerDialog.show()
-            }
-
-            private fun updateDate() {
-
-                val ourFormat = "EEE, d MMM yyyy"
-                val dateFormat = SimpleDateFormat(ourFormat)
-                finalDate = curCalendar.time.time
-//                dateCur.setText(dateFormat.format(curCalendar.time))
-
-//                timeInptLay.visibility = View.VISIBLE
-
-            }
+//            private fun setListener() {
+//                curCalendar = Calendar.getInstance()
+//
+//                dateSetListener =
+//                    DatePickerDialog.OnDateSetListener { _: DatePicker, year: Int, month: Int, dayOfMonth: Int ->
+//                        curCalendar.set(Calendar.YEAR, year)
+//                        curCalendar.set(Calendar.MONTH, month)
+//                        curCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+//                        updateDate()
+//
+//                    }
+//
+//                val datePickerDialog = DatePickerDialog(
+//                    this, dateSetListener, curCalendar.get(Calendar.YEAR),
+//                    curCalendar.get(Calendar.MONTH), curCalendar.get(Calendar.DAY_OF_MONTH)
+//                )
+//                datePickerDialog.datePicker.minDate = System.currentTimeMillis()
+//                datePickerDialog.show()
+//            }
+//
+//            private fun updateDate() {
+//
+//                val ourFormat = "EEE, d MMM yyyy"
+//                val dateFormat = SimpleDateFormat(ourFormat)
+//                finalDate = curCalendar.time.time
+////                dateCur.setText(dateFormat.format(curCalendar.time))
+//
+////                timeInptLay.visibility = View.VISIBLE
+//
+//            }
 
     fun goSocial(item: MenuItem) {
         val intent = Intent(this, SocialActivity::class.java)
         startActivity(intent)
     }
+
 }
