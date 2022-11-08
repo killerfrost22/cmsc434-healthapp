@@ -39,21 +39,34 @@ class DashboardFragment : Fragment() {
             textView.text = it
         }*/
         var activity: MainActivity = MainActivity();
-        val yes = activity.YDAY
+        val yes = activity.TODAY
 
 
 
         val eatProgress: Float = ((yes.getCalsEaten().toFloat() / yes.getCalsGoal().toFloat())*100.toFloat())
-       kotlin.math.round(eatProgress);
+        kotlin.math.round(eatProgress);
         System.out.println(eatProgress);
-       var inteatProg = eatProgress .toInt();
+        var inteatProg = eatProgress .toInt();
         var pview : ProgressBar=binding.progressBar2
         pview.setProgress(inteatProg)
-        val burned = yes.getMealCals(0,"Waffles")
+        //val burned = yes.getMealCals(0,"Waffles")
         var tv : TextView= binding.pbarText
         tv.text= inteatProg.toString()+"%"
-        //var x = getString(R.string.str1)
-        //x="nah"
+        var breakCals : TextView = binding.homeBreakfastCals
+        breakCals.text= yes.getCalsBreakfast().toString();
+        var lunCals : TextView = binding.homeLunchCals
+        lunCals.text= yes.getCalsLunch().toString();
+        var dinCals : TextView = binding.homeDinnerCals
+        dinCals.text= yes.getCalsDinner().toString();
+        var snackCals : TextView = binding.homeSnackCals
+        snackCals.text= yes.getCalsSnack().toString();
+        var tWeight = binding.todayWeight
+        tWeight.text = yes.getWeight().toString()
+
+
+
+
+
         return root
     }
 
