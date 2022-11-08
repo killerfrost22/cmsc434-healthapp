@@ -515,43 +515,43 @@
                         android:id="@+id/textView23"
                         android:layout_width="193dp"
                         android:layout_height="30dp"
-                        android:text="Monday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView24"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Tuesday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView25"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Wednesday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView26"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Thursday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView27"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Friday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView28"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Saturday" />
+                        android:text="TextView" />
 
                     <TextView
                         android:id="@+id/textView29"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="Sunday" />
+                        android:text="TextView" />
 
                 </LinearLayout>
 
