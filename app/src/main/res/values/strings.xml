@@ -3,4 +3,69 @@
     <string name="title_home">Workout</string>
     <string name="title_dashboard">Home</string>
     <string name="title_notifications">Nutrition</string>
+<<<<<<< Updated upstream
+=======
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_nutrition">NutritionActivity</string>
+    <string name="title_meal_manager_activity">MealManagerActivity</string>
+    <string name="meal_item_calories">Calories:</string>
+    <string name="meal_item_fats">Fats:</string>
+    <string name="meal_item_carbs">Carbs:</string>
+    <string name="meal_list_footer">Add New Meal</string>
+    <string name="food_list_footer">Add New Food</string>
+    <string name="meal_manager_header">Saved Meals</string>
+    <string name="button_save">SAVE</string>
+    <string name="button_delete">DELETE</string>
+    <string name="button_cancel">CANCEL</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="title_1">HEALTH</string>
+    <string name="title_2">0101-06</string>
+    <string name="title_3">Tap anywhere to continue.</string>
+    <string name="user_name">Name:</string>
+    <string name="user_age">Age:</string>
+    <string name="user_gender">Gender:</string>
+    <string name="user_heightFt">Height (ft):</string>
+    <string name="user_heightIn">Height (in):</string>
+    <string name="user_weight">Weight (lbs):</string>
+    <string name="user_gender_m">M</string>
+    <string name="user_gender_f">F</string>
+    <string name="user_gender_other">Other</string>
+    <string name="user_continue_button">CONTINUE</string>
+    <string name="user_save_button">SAVE</string>
+    <string name="user_cancel_button">CANCEL</string>
+    <string name="home_1">Health Overview</string>
+    <string name="home_2">Navigation</string>
+    <string name="home_3">Nutrition Tracker</string>
+    <string name="home_4">Activity Tracker</string>
+    <string name="home_5">Meal Manager</string>
+    <string name="home_6">Edit Profile</string>
+    <string name="nutrition_1">Today\'s Nutrition Overview</string>
+    <string name="nutrition_2">Today\'s Meals</string>
+    <string name="nutrition_3">+ Add Meal</string>
+    <string name="nutrition_4">Select a Meal</string>
+    <string name="temporary">TEMPORARY</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+    <string-array name="exercise_array">
+        <item>Running</item>
+        <item>Yoga</item>
+        <item>Weightlifting</item>
+        <item>Pilates</item>
+        <item>Biking</item>
+        <item>Dancing</item>
+        <item>Sports</item>
+        <item>Swimming</item>
+    </string-array>
+>>>>>>> Stashed changes
 </resources>
