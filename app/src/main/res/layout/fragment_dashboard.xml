@@ -452,7 +452,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="179 lbs"
+                        android:text="Lose 20 lbs"
                         android:textAlignment="center"
                         android:textColor="#cd3f3f"
                         android:textSize="24sp"
@@ -515,43 +515,43 @@
                         android:id="@+id/textView23"
                         android:layout_width="193dp"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Monday" />
 
                     <TextView
                         android:id="@+id/textView24"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Tuesday" />
 
                     <TextView
                         android:id="@+id/textView25"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Wednesday" />
 
                     <TextView
                         android:id="@+id/textView26"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Thursday" />
 
                     <TextView
                         android:id="@+id/textView27"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Friday" />
 
                     <TextView
                         android:id="@+id/textView28"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Saturday" />
 
                     <TextView
                         android:id="@+id/textView29"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
-                        android:text="TextView" />
+                        android:text="Sunday" />
 
                 </LinearLayout>
 
