@@ -94,6 +94,17 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
                 updateTime()
             }
 
+    fun playVideo(v: View){
+        //var b = v.findViewById<Button>(R.id.starMed1)
+        var hr = findViewById<TextView>(R.id.heartRate)
+        var x = findViewById<VideoView>(R.id.videoView)
+
+        x.setVideoURI(Uri.parse("android.resource://"+ getPackageName() +"/"+R.raw.medppt))
+        hr.visibility=View.VISIBLE
+        x.start()
+    }
+}
+
         val timePickerDialog = TimePickerDialog(
             this, timeSetListener, curCalendar.get(Calendar.HOUR_OF_DAY),
             curCalendar.get(Calendar.MINUTE), false
