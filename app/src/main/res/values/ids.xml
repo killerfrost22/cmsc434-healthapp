@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="userNameLabel" type="id" />
+    <item name="userNameLabel" type="id" />
+    <item name="userNameEdit" type="id" />
+    <item name="userAgeLabel" type="id" />
+    <item name="userAgeEdit" type="id" />
+    <item name="userHeightFtLabel" type="id" />
+    <item name="userHeightFtEdit" type="id" />
+    <item name="userHeightInLabel" type="id" />
+    <item name="userHeightInEdit" type="id" />
+    <item name="userWeightLabel" type="id" />
+    <item name="userWeightEdit" type="id" />
+    <item name="userContinueButton" type="id" />
+    <item name="genderOtherButton" type="id" />
+    <item name="genderFButton" type="id" />
+    <item name="genderMButton" type="id" />
+    <item name="userGenderLabel" type="id" />
+    <item name="genderRadioGroup" type="id" />
+</resources>
