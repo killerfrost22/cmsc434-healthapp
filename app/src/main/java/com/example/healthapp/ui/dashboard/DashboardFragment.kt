@@ -27,6 +27,7 @@ class DashboardFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
+
     ): View {
         val dashboardViewModel =
             ViewModelProvider(this).get(DashboardViewModel::class.java)
@@ -44,9 +45,9 @@ class DashboardFragment : Fragment() {
 
 
         val eatProgress: Float = ((yes.getCalsEaten().toFloat() / yes.getCalsGoal().toFloat())*100.toFloat())
-       kotlin.math.round(eatProgress);
+        kotlin.math.round(eatProgress);
         System.out.println(eatProgress);
-       var inteatProg = eatProgress .toInt();
+        var inteatProg = eatProgress .toInt();
         var pview : ProgressBar=binding.progressBar2
         pview.setProgress(inteatProg)
         val burned = yes.getMealCals(0,"Waffles")

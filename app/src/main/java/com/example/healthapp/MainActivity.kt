@@ -2,9 +2,11 @@ package com.example.healthapp
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.graphics.*
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.DatePicker
 import android.widget.TimePicker
@@ -20,6 +22,7 @@ import com.example.healthapp.MainData as HealthappMainData
 import java.text.SimpleDateFormat
 import java.util.*
 import android.view.MenuInflater
+import com.example.healthapp.ui.social.SocialActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener  {
     lateinit var curCalendar: Calendar
@@ -129,4 +132,9 @@ class MainActivity : AppCompatActivity(), View.OnClickListener  {
 //                timeInptLay.visibility = View.VISIBLE
 
             }
+
+    fun goSocial(item: MenuItem) {
+        val intent = Intent(this, SocialActivity::class.java)
+        startActivity(intent)
+    }
 }
