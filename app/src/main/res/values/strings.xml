@@ -1,16 +1,9 @@
 <resources>
     <string name="app_name">healthapp</string>
-    <string name="title_home">Workout</string>
-    <string name="title_dashboard">Home</string>
-    <string name="title_notifications">Nutrition</string>
-    <string name="user_name" />
-    <string name="user_age" />
-    <string name="user_heightFt" />
-    <string name="user_heightIn" />
-    <string name="user_weight" />
-    <string name="user_continue_button" />
-    <string name="user_gender_other" />
-    <string name="user_gender_f" />
-    <string name="user_gender_m" />
-    <string name="user_gender" />
+    <string name="title_workout">Workout</string>
+    <string name="title_home">Home</string>
+    <string name="title_nutrition">Nutrition</string>
+    <string name="social">Social</string>
+    <string name="history">History</string>
+    <string name="search">Search</string>
 </resources>
